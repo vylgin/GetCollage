@@ -1,13 +1,7 @@
 package pro.vylgin.getcollage;
 
 import android.app.Activity;
-import android.app.FragmentTransaction;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.Toast;
 
 
 public class MainActivity extends Activity {
@@ -19,7 +13,7 @@ public class MainActivity extends Activity {
 
         getFragmentManager()
                 .beginTransaction()
-                .add(R.id.ui_container, new FirstFragment())
+                .add(R.id.ui_container, FirstFragment.newInstance())
                 .commit();
     }
 
