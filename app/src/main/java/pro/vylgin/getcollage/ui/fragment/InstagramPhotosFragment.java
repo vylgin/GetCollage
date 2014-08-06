@@ -1,4 +1,4 @@
-package pro.vylgin.getcollage;
+package pro.vylgin.getcollage.ui.fragment;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -7,15 +7,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import pro.vylgin.getcollage.R;
+
 public class InstagramPhotosFragment extends Fragment {
-    private static final String INSTAGRAM_LOGIN = "instagram_login";
+    private static final String ARG_INSTAGRAM_LOGIN = "instagram_login";
 
     private String mInstagramLogin;
 
     public static InstagramPhotosFragment newInstance(String instagramLogin) {
         InstagramPhotosFragment fragment = new InstagramPhotosFragment();
         Bundle args = new Bundle();
-        args.putString(INSTAGRAM_LOGIN, instagramLogin);
+        args.putString(ARG_INSTAGRAM_LOGIN, instagramLogin);
         fragment.setArguments(args);
 
         return fragment;
@@ -25,7 +27,7 @@ public class InstagramPhotosFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mInstagramLogin = getArguments().getString(INSTAGRAM_LOGIN);
+            mInstagramLogin = getArguments().getString(ARG_INSTAGRAM_LOGIN);
         }
     }
 

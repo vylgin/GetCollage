@@ -1,10 +1,13 @@
-package pro.vylgin.getcollage;
+package pro.vylgin.getcollage.ui.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
 
+import pro.vylgin.getcollage.R;
+import pro.vylgin.getcollage.ui.fragment.FirstFragment;
 
-public class MainActivity extends Activity {
+
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
