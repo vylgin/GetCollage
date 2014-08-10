@@ -2,7 +2,7 @@ package pro.vylgin.getcollage.model;
 
 import java.util.ArrayList;
 
-public class User {
+public class InstagramUser {
     private String username;
     private String id;
     private String profile_picture;

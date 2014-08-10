@@ -10,14 +10,14 @@ import android.widget.TextView;
 import pro.vylgin.getcollage.R;
 
 public class InstagramPhotosFragment extends Fragment {
-    private static final String ARG_INSTAGRAM_LOGIN = "instagram_login";
+    private static final String ARG_ID_INSTAGRAM_USER = "id_instagram_user";
 
-    private String mInstagramLogin;
+    private String mIdInstagramUser;
 
-    public static InstagramPhotosFragment newInstance(String instagramLogin) {
+    public static InstagramPhotosFragment newInstance(String idInstagramUser) {
         InstagramPhotosFragment fragment = new InstagramPhotosFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_INSTAGRAM_LOGIN, instagramLogin);
+        args.putString(ARG_ID_INSTAGRAM_USER, idInstagramUser);
         fragment.setArguments(args);
 
         return fragment;
@@ -27,7 +27,7 @@ public class InstagramPhotosFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mInstagramLogin = getArguments().getString(ARG_INSTAGRAM_LOGIN);
+            mIdInstagramUser = getArguments().getString(ARG_ID_INSTAGRAM_USER);
         }
     }
 
@@ -37,7 +37,7 @@ public class InstagramPhotosFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_instagram_photos, container, false);
 
         TextView instagramLoginTextView = (TextView) view.findViewById(R.id.helloInstagramLoginTextView);
-        instagramLoginTextView.setText(String.format("Get Collage, %s!", mInstagramLogin));
+        instagramLoginTextView.setText(String.format("Photos for user_id: %s:", mIdInstagramUser));
 
         return view;
     }
